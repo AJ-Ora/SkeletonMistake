@@ -16,13 +16,15 @@ namespace SkeletonMistake
         [SerializeField] private float acceleration = 80.0f;
         [SerializeField] private float maxHorizontalVelocity = 8.0f;
         [SerializeField] private float jumpForce = 5.0f;
-        [SerializeField] private int maxJumps = 3;
+        [SerializeField] private int maxMidairJumps = 3;
+        [SerializeField] private float coyoteTime = 0.3f;
 
         private Rigidbody2D rigid = null;
         private BoxCollider2D col = null;
         private bool isJumping = false;
         private bool isGrounded = false;
-        private int currentJumps = 0;
+        private int currentMidairJumps = 0;
+        private float currentCoyoteTime = 0.0f;
 
         private void Awake()
         {
@@ -41,15 +43,16 @@ namespace SkeletonMistake
         {
             /* ----- CHECK IF GROUNDED ----- */
 
-            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + Vector3.left * col.size.x / 2 + Vector3.down * col.size.y / 2, Vector2.down, 0.05f);
-            RaycastHit2D hitRight = Physics2D.Raycast(transform.position + Vector3.right * col.size.x / 2 + Vector3.down * col.size.y / 2, Vector2.down, 0.05f);
+            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + Vector3.left * col.size.x / 2.0f + Vector3.down * col.size.y / 1.99f, Vector2.down, 0.05f);
+            RaycastHit2D hitRight = Physics2D.Raycast(transform.position + Vector3.right * col.size.x / 2.0f + Vector3.down * col.size.y / 1.99f, Vector2.down, 0.05f);
             
             if (hitLeft.collider != null || hitRight.collider != null)
             {
                 if (hitLeft.collider != col && hitRight.collider != col)
                 {
                     isGrounded = true;
-                    currentJumps = maxJumps;
+                    currentMidairJumps = maxMidairJumps;
+                    currentCoyoteTime = coyoteTime;
                 }
                 else
                 {
@@ -61,8 +64,10 @@ namespace SkeletonMistake
                 isGrounded = false;
             }
 
-            Debug.DrawRay(transform.position + Vector3.left * col.size.x / 2 + Vector3.down * col.size.y / 2, Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
-            Debug.DrawRay(transform.position + Vector3.right * col.size.x / 2 + Vector3.down * col.size.y / 2, Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
+            currentCoyoteTime -= isGrounded ? 0.0f : Time.fixedDeltaTime;
+            
+            Debug.DrawRay(transform.position + Vector3.left * col.size.x / 2.0f + Vector3.down * col.size.y / 1.99f, Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
+            Debug.DrawRay(transform.position + Vector3.right * col.size.x / 2.0f + Vector3.down * col.size.y / 1.99f, Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
 
             /* ----- DO SOME PHYSICS BASED ON INPUTS ----- */
 
@@ -72,11 +77,18 @@ namespace SkeletonMistake
                 {
                     isJumping = true;
 
-                    if (currentJumps > 0)
+                    if (isGrounded || currentMidairJumps > 0)
                     {
+                        if (!isGrounded)
+                        {
+                            if (currentCoyoteTime <= 0.0f)
+                            {
+                                currentMidairJumps--;
+                            }
+                        }
+                        currentCoyoteTime = 0.0f;
                         rigid.velocity = new Vector2(rigid.velocity.x, 0.0f);
                         rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                        currentJumps--;
                     }
                 }
             }

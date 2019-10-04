@@ -467,9 +467,10 @@ MonoBehaviour:
   inputHorizontal: Horizontal
   inputJump: Jump
   acceleration: 80
-  maxHorizontalVelocity: 8
+  maxHorizontalVelocity: 10
   jumpForce: 16
-  maxJumps: 3
+  maxMidairJumps: 3
+  coyoteTime: 0.3
 --- !u!1 &316329263
 GameObject:
   m_ObjectHideFlags: 0
