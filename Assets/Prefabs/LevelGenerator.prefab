@@ -44,6 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelCombat: {fileID: 11400000, guid: 9b972c1d131503847be36d4bcb0fd800, type: 2}
-  levelDating: {fileID: 11400000, guid: 9b972c1d131503847be36d4bcb0fd800, type: 2}
+  levelDating: {fileID: 11400000, guid: 376435460339da24c94cbbd9a07b289e, type: 2}
   player: {fileID: 0}
   generateChunks: 3
+  dateData: {fileID: 11400000, guid: ddd3e6fa50ad91a4c820d3909adadf40, type: 2}
+  datingCharacterPosition: {x: 10, y: 1}
+  dialogTriggerPrefab: {fileID: 8230098196941271338, guid: 99e9fb17afcc6294d8b2773f7bb382e5,
+    type: 3}
+  chunksUntilWin: 10
+  winTriggerPrefab: {fileID: 3197263978220783710, guid: 5ffbf1393b4ced24cb915382b9badd14,
+    type: 3}
