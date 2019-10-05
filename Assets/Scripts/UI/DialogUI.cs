@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ namespace SkeletonMistake
             Events.OnDialogStart += DialogStart;
             Events.OnDialogSelected += DialogSelected;
             Events.OnDialogEnd += DialogEnd;
+            Events.OnPlayerTakeDamage += PlayerTakeDamage;
             gameObject.SetActive(false);
         }
 
@@ -67,6 +69,14 @@ namespace SkeletonMistake
         {
             gameObject.SetActive(false);
             currentDialog = -1;
+        }
+
+        private void PlayerTakeDamage(int health, int damage)
+        {
+            if (health <= 0)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 

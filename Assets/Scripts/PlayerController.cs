@@ -64,6 +64,8 @@ namespace SkeletonMistake
         private void OnHurt()
         {
             health--;
+
+            Events.InvokePlayerTakeDamage(health, 1);
             
             if (health <= 0)
             {
@@ -85,6 +87,7 @@ namespace SkeletonMistake
                     isGrounded = true;
                     currentMidairJumps = maxMidairJumps;
                     currentCoyoteTime = coyoteTime;
+                    Events.InvokePlayerLand(currentMidairJumps);
                 }
                 else
                 {
@@ -119,6 +122,7 @@ namespace SkeletonMistake
                                 if (projectile != null)
                                 {
                                     Instantiate(projectile, transform.position + projectileSpawnPosition, Quaternion.identity, null);
+                                    Events.InvokePlayerShoot(currentMidairJumps);
                                 }
                                 else
                                 {
