@@ -14,6 +14,7 @@ namespace SkeletonMistake
 
         private Rigidbody2D rigid = null;
         private BoxCollider2D col = null;
+        private bool hit = false;
 
         private void Awake()
         {
@@ -35,10 +36,15 @@ namespace SkeletonMistake
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Breakable")
+            if (!hit)
             {
-                Destroy(collision.gameObject);
+                if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Breakable")
+                {
+                    Destroy(collision.gameObject);
+                }
             }
+            
+            hit = true;
             Destroy(this.gameObject);
         }
     }
