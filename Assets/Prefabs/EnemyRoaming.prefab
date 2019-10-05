@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1819069476757870124}
   - component: {fileID: 1819069476757870125}
   - component: {fileID: 1819069476757870122}
+  - component: {fileID: 5535205672583442852}
   m_Layer: 9
   m_Name: EnemyRoaming
   m_TagString: Enemy
@@ -96,6 +97,20 @@ MonoBehaviour:
   isMovingRight: 0
   acceleration: 80
   maxHorizontalVelocity: 4
+--- !u!114 &5535205672583442852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819069476757870123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1819069477291342782
 GameObject:
   m_ObjectHideFlags: 0
