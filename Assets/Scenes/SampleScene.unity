@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 177836474}
   - component: {fileID: 177836476}
   - component: {fileID: 177836475}
+  - component: {fileID: 177836477}
   m_Layer: 0
   m_Name: BreakableTile (15)
   m_TagString: Breakable
@@ -451,6 +452,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &177836477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177836473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &211345992
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +556,7 @@ GameObject:
   - component: {fileID: 259286354}
   - component: {fileID: 259286356}
   - component: {fileID: 259286355}
+  - component: {fileID: 259286357}
   m_Layer: 0
   m_Name: BreakableTile (20)
   m_TagString: Breakable
@@ -610,6 +626,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &259286357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259286353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!4 &292332880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4680581381172277415, guid: 6d0d785f60ea9c947b06d1e023c15acf,
@@ -1352,6 +1382,7 @@ GameObject:
   - component: {fileID: 333500487}
   - component: {fileID: 333500489}
   - component: {fileID: 333500488}
+  - component: {fileID: 333500490}
   m_Layer: 0
   m_Name: BreakableTile (14)
   m_TagString: Breakable
@@ -1421,6 +1452,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &333500490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333500486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &364914753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1556,7 @@ GameObject:
   - component: {fileID: 466722502}
   - component: {fileID: 466722504}
   - component: {fileID: 466722503}
+  - component: {fileID: 466722505}
   m_Layer: 0
   m_Name: BreakableTile (23)
   m_TagString: Breakable
@@ -1580,6 +1626,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &466722505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466722501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &499367626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1830,7 @@ GameObject:
   - component: {fileID: 521264119}
   - component: {fileID: 521264121}
   - component: {fileID: 521264120}
+  - component: {fileID: 521264122}
   m_Layer: 0
   m_Name: BreakableTile (10)
   m_TagString: Breakable
@@ -1839,6 +1900,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &521264122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521264118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &542870956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,6 +1925,7 @@ GameObject:
   - component: {fileID: 542870957}
   - component: {fileID: 542870959}
   - component: {fileID: 542870958}
+  - component: {fileID: 542870960}
   m_Layer: 0
   m_Name: BreakableTile (21)
   m_TagString: Breakable
@@ -1919,6 +1995,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &542870960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542870956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &610718075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2232,7 @@ GameObject:
   - component: {fileID: 845033542}
   - component: {fileID: 845033544}
   - component: {fileID: 845033543}
+  - component: {fileID: 845033545}
   m_Layer: 0
   m_Name: BreakableTile (9)
   m_TagString: Breakable
@@ -2211,6 +2302,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &845033545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845033541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &859493225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,6 +2643,7 @@ GameObject:
   - component: {fileID: 1049249688}
   - component: {fileID: 1049249687}
   - component: {fileID: 1049249686}
+  - component: {fileID: 1049249689}
   m_Layer: 0
   m_Name: BreakableTile (4)
   m_TagString: Breakable
@@ -2607,6 +2713,20 @@ Transform:
   m_Father: {fileID: 704275640}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1049249689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049249685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1060720325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2817,7 @@ GameObject:
   - component: {fileID: 1173080458}
   - component: {fileID: 1173080457}
   - component: {fileID: 1173080456}
+  - component: {fileID: 1173080459}
   m_Layer: 0
   m_Name: BreakableTile
   m_TagString: Breakable
@@ -2766,6 +2887,20 @@ Transform:
   m_Father: {fileID: 704275640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1173080459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173080455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1236126669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,6 +2912,7 @@ GameObject:
   - component: {fileID: 1236126670}
   - component: {fileID: 1236126672}
   - component: {fileID: 1236126671}
+  - component: {fileID: 1236126673}
   m_Layer: 0
   m_Name: BreakableTile (11)
   m_TagString: Breakable
@@ -2846,6 +2982,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1236126673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236126669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1269102696
 GameObject:
   m_ObjectHideFlags: 0
@@ -3015,6 +3165,7 @@ GameObject:
   - component: {fileID: 1284826023}
   - component: {fileID: 1284826025}
   - component: {fileID: 1284826024}
+  - component: {fileID: 1284826026}
   m_Layer: 0
   m_Name: BreakableTile (6)
   m_TagString: Breakable
@@ -3084,6 +3235,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1284826026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284826022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1453051703
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,6 +3339,7 @@ GameObject:
   - component: {fileID: 1486024968}
   - component: {fileID: 1486024967}
   - component: {fileID: 1486024966}
+  - component: {fileID: 1486024969}
   m_Layer: 0
   m_Name: BreakableTile (3)
   m_TagString: Breakable
@@ -3243,6 +3409,20 @@ Transform:
   m_Father: {fileID: 704275640}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486024969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486024965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1504782440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,6 +3592,7 @@ GameObject:
   - component: {fileID: 1560964269}
   - component: {fileID: 1560964271}
   - component: {fileID: 1560964270}
+  - component: {fileID: 1560964272}
   m_Layer: 0
   m_Name: BreakableTile (18)
   m_TagString: Breakable
@@ -3481,6 +3662,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1560964272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560964268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1582162106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3766,7 @@ GameObject:
   - component: {fileID: 1586856606}
   - component: {fileID: 1586856608}
   - component: {fileID: 1586856607}
+  - component: {fileID: 1586856609}
   m_Layer: 0
   m_Name: BreakableTile (22)
   m_TagString: Breakable
@@ -3640,6 +3836,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1586856609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586856605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1606905328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,6 +3940,7 @@ GameObject:
   - component: {fileID: 1616284730}
   - component: {fileID: 1616284729}
   - component: {fileID: 1616284728}
+  - component: {fileID: 1616284731}
   m_Layer: 0
   m_Name: BreakableTile (2)
   m_TagString: Breakable
@@ -3799,6 +4010,20 @@ Transform:
   m_Father: {fileID: 704275640}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1616284731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616284727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1634594412
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,6 +4035,7 @@ GameObject:
   - component: {fileID: 1634594413}
   - component: {fileID: 1634594415}
   - component: {fileID: 1634594414}
+  - component: {fileID: 1634594416}
   m_Layer: 0
   m_Name: BreakableTile (19)
   m_TagString: Breakable
@@ -3879,6 +4105,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1634594416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634594412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1650944185
 GameObject:
   m_ObjectHideFlags: 0
@@ -4127,6 +4367,7 @@ GameObject:
   - component: {fileID: 1703643892}
   - component: {fileID: 1703643894}
   - component: {fileID: 1703643893}
+  - component: {fileID: 1703643895}
   m_Layer: 0
   m_Name: BreakableTile (17)
   m_TagString: Breakable
@@ -4196,6 +4437,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1703643895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703643891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1716102608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,6 +4462,7 @@ GameObject:
   - component: {fileID: 1716102609}
   - component: {fileID: 1716102611}
   - component: {fileID: 1716102610}
+  - component: {fileID: 1716102612}
   m_Layer: 0
   m_Name: BreakableTile (16)
   m_TagString: Breakable
@@ -4276,6 +4532,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1716102612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716102608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1766128818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,6 +4557,7 @@ GameObject:
   - component: {fileID: 1766128819}
   - component: {fileID: 1766128821}
   - component: {fileID: 1766128820}
+  - component: {fileID: 1766128822}
   m_Layer: 0
   m_Name: BreakableTile (13)
   m_TagString: Breakable
@@ -4356,6 +4627,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1766128822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766128818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1807648345
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,6 +4652,7 @@ GameObject:
   - component: {fileID: 1807648348}
   - component: {fileID: 1807648347}
   - component: {fileID: 1807648346}
+  - component: {fileID: 1807648349}
   m_Layer: 0
   m_Name: BreakableTile (5)
   m_TagString: Breakable
@@ -4436,6 +4722,20 @@ Transform:
   m_Father: {fileID: 704275640}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1807648349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807648345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &1866812661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,6 +4826,7 @@ GameObject:
   - component: {fileID: 1994347186}
   - component: {fileID: 1994347188}
   - component: {fileID: 1994347187}
+  - component: {fileID: 1994347189}
   m_Layer: 0
   m_Name: BreakableTile (7)
   m_TagString: Breakable
@@ -4595,6 +4896,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1994347189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994347185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &2041382262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,6 +5000,7 @@ GameObject:
   - component: {fileID: 2133606514}
   - component: {fileID: 2133606516}
   - component: {fileID: 2133606515}
+  - component: {fileID: 2133606517}
   m_Layer: 0
   m_Name: BreakableTile (12)
   m_TagString: Breakable
@@ -4754,6 +5070,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &2133606517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133606513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!1 &2145714912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4765,6 +5095,7 @@ GameObject:
   - component: {fileID: 2145714913}
   - component: {fileID: 2145714915}
   - component: {fileID: 2145714914}
+  - component: {fileID: 2145714916}
   m_Layer: 0
   m_Name: BreakableTile (8)
   m_TagString: Breakable
@@ -4834,6 +5165,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &2145714916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145714912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!4 &41954720540866472
 Transform:
   m_ObjectHideFlags: 0
@@ -4939,6 +5284,7 @@ GameObject:
   - component: {fileID: 41954721752754309}
   - component: {fileID: 41954721752754330}
   - component: {fileID: 41954721752754331}
+  - component: {fileID: 41954721752754329}
   m_Layer: 0
   m_Name: BreakableTile (1)
   m_TagString: Breakable
@@ -4946,6 +5292,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &41954721752754329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41954721752754328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+    type: 3}
 --- !u!50 &41954721752754330
 Rigidbody2D:
   serializedVersion: 4
