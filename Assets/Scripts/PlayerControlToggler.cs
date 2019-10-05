@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace SkeletonMistake
@@ -12,12 +13,14 @@ namespace SkeletonMistake
             controller = GetComponent<PlayerController>();
             Events.OnDialogStart += DialogStart;
             Events.OnDialogEnd += DialogEnd;
+            Events.OnGameWon += GameWon;
         }
 
         private void OnDestroy()
         {
             Events.OnDialogStart -= DialogStart;
             Events.OnDialogEnd -= DialogEnd;
+            Events.OnGameWon -= GameWon;
         }
 
         private void DialogStart(int dialogIndex)
@@ -28,6 +31,11 @@ namespace SkeletonMistake
         private void DialogEnd(DialogData.DialogChoiceType result)
         {
             StartCoroutine(EnableControls());
+        }
+
+        private void GameWon()
+        {
+            controller.enabled = false;
         }
 
         private IEnumerator EnableControls()
