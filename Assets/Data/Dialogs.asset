@@ -13,21 +13,63 @@ MonoBehaviour:
   m_Name: Dialogs
   m_EditorClassIdentifier: 
   Entries:
-  - Subtitle: Test
+  - Subtitle: Hello! Wanna try my apple pie?
     Portrait: {fileID: 21300000, guid: 42e6d52b91119694f90c5dd74c0f57de, type: 3}
     Choices:
-    - Text: Yes
-      ChoiceType: 1
-      NextDialogIndex: 0
-    - Text: No
-      ChoiceType: 2
-      NextDialogIndex: 0
-    - Text: Maybe
+    - Text: Sure!
       ChoiceType: 0
       NextDialogIndex: 1
-  - Subtitle: Test2
+    - Text: No!
+      ChoiceType: 0
+      NextDialogIndex: 2
+    - Text: I'd prefer blue beary pie (Wink wink)
+      ChoiceType: 0
+      NextDialogIndex: 3
+  - Subtitle: Tasty isn't it?
     Portrait: {fileID: 0}
     Choices:
-    - Text: Haha yes
+    - Text: Yes! Very good. But I only see you as a good friend
+      ChoiceType: 1
+      NextDialogIndex: 0
+  - Subtitle: Go away
+    Portrait: {fileID: 0}
+    Choices:
+    - Text: Ok :(
+      ChoiceType: 2
+      NextDialogIndex: 0
+  - Subtitle: Haha! You're funny!
+    Portrait: {fileID: 0}
+    Choices:
+    - Text: (continue)
       ChoiceType: 0
+      NextDialogIndex: 4
+  - Subtitle: I am Gastro-Bear, I enjoy cooking. Do you like food?
+    Portrait: {fileID: 0}
+    Choices:
+    - Text: I definitely do!
+      ChoiceType: 0
+      NextDialogIndex: 5
+    - Text: I'm allergic to food
+      ChoiceType: 0
+      NextDialogIndex: 6
+    - Text: Upon eating I like to paws and reflect on my own image.
+      ChoiceType: 0
+      NextDialogIndex: 7
+  - Subtitle: Then try my pie! It's the best one I've made so far
+    Portrait: {fileID: 0}
+    Choices:
+    - Text: (You munch the pie and reflect on your own image.)
+      ChoiceType: 1
+      NextDialogIndex: 0
+  - Subtitle: Oh, that's sad. Now I feel bad. I need some time alone
+    Portrait: {fileID: 0}
+    Choices:
+    - Text: ok :(
+      ChoiceType: 2
+      NextDialogIndex: 0
+  - Subtitle: You're pretty self-centered aren't you?
+    Portrait: {fileID: 0}
+    Choices:
+    - Text: haha yes
+      ChoiceType: 2
       NextDialogIndex: 0
