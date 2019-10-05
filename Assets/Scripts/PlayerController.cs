@@ -15,6 +15,7 @@ namespace SkeletonMistake
         [Header("Variables")]
         [SerializeField] private float acceleration = 80.0f;
         [SerializeField] private float maxHorizontalVelocity = 8.0f;
+        [SerializeField] private float maxDropVelocity = 8.0f;
         [SerializeField] private float jumpForce = 5.0f;
         [SerializeField] private int maxMidairJumps = 3;
         [SerializeField] private float coyoteTime = 0.3f;
@@ -97,11 +98,24 @@ namespace SkeletonMistake
                 isJumping = false;
             }
             
-            rigid.AddForce((Vector2.right * Input.GetAxis(inputHorizontal)) * acceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            RaycastHit2D hitWallUp = Physics2D.Raycast(transform.position + (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left) * col.size.x / 1.99f + Vector3.up * col.size.y / 2.0f, (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left), 0.05f);
+            RaycastHit2D hitWallDown = Physics2D.Raycast(transform.position + (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left) * col.size.x / 1.99f + Vector3.down * col.size.y / 2.0f, (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left), 0.05f);
+
+            if ((hitWallUp.collider == null || hitWallUp.collider == col) && (hitWallDown.collider == null || hitWallDown.collider == col))
+            {
+                rigid.AddForce((Vector2.right * Input.GetAxis(inputHorizontal)) * acceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            }
+            
+            /* ----- LIMIT VELOCITY ----- */
 
             if (Mathf.Abs(rigid.velocity.x) > maxHorizontalVelocity)
             {
                 rigid.velocity = new Vector2(Mathf.Sign(rigid.velocity.x) * maxHorizontalVelocity, rigid.velocity.y);
+            }
+
+            if (rigid.velocity.y < -maxDropVelocity)
+            {
+                rigid.velocity = new Vector2(rigid.velocity.x, Mathf.Sign(rigid.velocity.y) * maxDropVelocity);
             }
         }
     }
