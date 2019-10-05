@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SkeletonMistake
 {
-    public class BreakableTile : MonoBehaviour
+    public class SpawnParticlesWhenDestroyed : MonoBehaviour
     {
         [SerializeField] private ParticleSystem effectWhenDestroyed = null;
 
