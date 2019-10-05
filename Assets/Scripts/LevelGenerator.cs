@@ -55,6 +55,18 @@ namespace SkeletonMistake
                     GenerateTile(data, tileColor, currentScreen.transform, x, y);
                 }
             }
+
+            //Generate invisible walls
+            GameObject walls = new GameObject("VerticalWalls " + screensCount);
+            walls.transform.position = currentScreen.transform.position;
+            walls.transform.parent = currentScreen.transform;
+            BoxCollider2D leftWall = walls.AddComponent<BoxCollider2D>();
+            BoxCollider2D rightWall = walls.AddComponent<BoxCollider2D>();
+            leftWall.size = new Vector2(1.0f, dimensions.y);
+            leftWall.offset = new Vector2(-1.0f, dimensions.y / 2 - 0.5f);
+            rightWall.size = new Vector2(1.0f, dimensions.y);
+            rightWall.offset = new Vector2(dimensions.x, dimensions.y / 2 - 0.5f);
+
         }
 
         private void GenerateTile(LevelData data, Color tileColor, Transform screen, int x, int y)
