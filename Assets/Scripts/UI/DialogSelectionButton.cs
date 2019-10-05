@@ -21,7 +21,7 @@ namespace SkeletonMistake
 
         private void OnDestroy()
         {
-            button.onClick.RemoveListener(OnClick);
+            button?.onClick.RemoveListener(OnClick);
             Events.OnDialogStart -= DialogStart;
         }
 

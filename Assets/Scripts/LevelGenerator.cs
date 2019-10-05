@@ -26,6 +26,11 @@ namespace SkeletonMistake
 
         private void Update()
         {
+            if(player == null)
+            {
+                return;
+            }
+
             int playerCurrentScreen = -Mathf.FloorToInt(player.transform.position.y / levelCombat.levels[0].height);
 
             for (int i = playerCurrentScreen; i < playerCurrentScreen + generateChunks; i++)
