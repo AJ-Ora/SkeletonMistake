@@ -75,8 +75,8 @@ namespace SkeletonMistake
         {
             /* ----- CHECK IF GROUNDED ----- */
 
-            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down, 0.05f);
-            RaycastHit2D hitRight = Physics2D.Raycast(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down, 0.05f);
+            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down, 0.05f);
+            RaycastHit2D hitRight = Physics2D.Raycast(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down, 0.05f);
             
             if (hitLeft.collider != null || hitRight.collider != null)
             {
@@ -98,8 +98,8 @@ namespace SkeletonMistake
 
             currentCoyoteTime -= isGrounded ? 0.0f : Time.fixedDeltaTime;
             
-            Debug.DrawRay(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
-            Debug.DrawRay(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
+            Debug.DrawRay(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
+            Debug.DrawRay(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down * 0.05f, isGrounded ? Color.green : Color.yellow);
 
             /* ----- DO SOME PHYSICS BASED ON INPUTS ----- */
 
@@ -137,8 +137,8 @@ namespace SkeletonMistake
                 isJumping = false;
             }
             
-            RaycastHit2D hitWallUp = Physics2D.Raycast(transform.position + (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left) * (col.size.x / 1.99f + col.edgeRadius) + Vector3.up * (col.size.y / 2.0f + col.edgeRadius), (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left), 0.05f);
-            RaycastHit2D hitWallDown = Physics2D.Raycast(transform.position + (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left) * (col.size.x / 1.99f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left), 0.05f);
+            RaycastHit2D hitWallUp = Physics2D.Raycast(transform.position + (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left) * (col.size.x / 2.0f + col.edgeRadius) + Vector3.up * (col.size.y / 2.0f + col.edgeRadius), (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left), 0.05f);
+            RaycastHit2D hitWallDown = Physics2D.Raycast(transform.position + (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left) * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), (Input.GetAxisRaw(inputHorizontal) >= 0 ? Vector3.right : Vector3.left), 0.05f);
 
             if ((hitWallUp.collider == null || hitWallUp.collider == col) && (hitWallDown.collider == null || hitWallDown.collider == col))
             {

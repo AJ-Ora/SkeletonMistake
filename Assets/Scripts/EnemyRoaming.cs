@@ -43,14 +43,14 @@ namespace SkeletonMistake
         {
             /* ----- CHECK IF ENEMY SHOULD CHANGE DIRECTION ----- */
 
-            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down, 0.99f);
-            RaycastHit2D hitRight = Physics2D.Raycast(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down, 0.99f);
+            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down, 0.99f);
+            RaycastHit2D hitRight = Physics2D.Raycast(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down, 0.99f);
 
-            Debug.DrawRay(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down * 0.99f, Color.green);
-            Debug.DrawRay(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 1.99f + col.edgeRadius), Vector2.down * 0.995f, Color.green);
+            Debug.DrawRay(transform.position + Vector3.left * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down * 0.99f, Color.green);
+            Debug.DrawRay(transform.position + Vector3.right * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), Vector2.down * 0.995f, Color.green);
 
-            RaycastHit2D hitWallUp = Physics2D.Raycast(transform.position + (isMovingRight ? Vector3.right : Vector3.left) * (col.size.x / 1.99f + col.edgeRadius) + Vector3.up * (col.size.y / 2.0f + col.edgeRadius), (isMovingRight ? Vector3.right : Vector3.left), 0.05f);
-            RaycastHit2D hitWallDown = Physics2D.Raycast(transform.position + (isMovingRight ? Vector3.right : Vector3.left) * (col.size.x / 1.99f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), (isMovingRight ? Vector3.right : Vector3.left), 0.05f);
+            RaycastHit2D hitWallUp = Physics2D.Raycast(transform.position + (isMovingRight ? Vector3.right : Vector3.left) * (col.size.x / 2.0f + col.edgeRadius) + Vector3.up * (col.size.y / 2.0f + col.edgeRadius), (isMovingRight ? Vector3.right : Vector3.left), 0.05f);
+            RaycastHit2D hitWallDown = Physics2D.Raycast(transform.position + (isMovingRight ? Vector3.right : Vector3.left) * (col.size.x / 2.0f + col.edgeRadius) + Vector3.down * (col.size.y / 2.0f + col.edgeRadius), (isMovingRight ? Vector3.right : Vector3.left), 0.05f);
             
             if (((isMovingRight ? hitRight.collider : hitLeft.collider) == null || (isMovingRight ? hitRight.collider : hitLeft.collider) == col)
                 || (hitWallUp.collider != null && hitWallUp.collider != col)

@@ -5060,21 +5060,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1819069476757870125, guid: ce1b3c0c3c907114bb650d56b57555ce,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1819069476757870125, guid: ce1b3c0c3c907114bb650d56b57555ce,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1819069476757870125, guid: ce1b3c0c3c907114bb650d56b57555ce,
-        type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1b3c0c3c907114bb650d56b57555ce, type: 3}
 --- !u!1001 &4680581381430449655
@@ -5144,26 +5129,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4680581381172277433, guid: 6d0d785f60ea9c947b06d1e023c15acf,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680581381172277433, guid: 6d0d785f60ea9c947b06d1e023c15acf,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680581381172277433, guid: 6d0d785f60ea9c947b06d1e023c15acf,
-        type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680581381172277413, guid: 6d0d785f60ea9c947b06d1e023c15acf,
-        type: 3}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 6086632028979026718, guid: 2d9da1b64852a2d42b21d701a681d9d4,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d0d785f60ea9c947b06d1e023c15acf, type: 3}
