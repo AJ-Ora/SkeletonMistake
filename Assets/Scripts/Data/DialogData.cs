@@ -25,6 +25,7 @@ namespace SkeletonMistake
         public class DialogEntry
         {
             public string Subtitle;
+            public Sprite Portrait;
             public List<DialogChoice> Choices;
         }
 
