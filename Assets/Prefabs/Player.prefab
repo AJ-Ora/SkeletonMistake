@@ -100,9 +100,10 @@ MonoBehaviour:
   inputJump: Jump
   health: 3
   acceleration: 80
-  maxHorizontalVelocity: 10
-  maxDropVelocity: 8
-  jumpForce: 16
+  airAcceleration: 30
+  maxHorizontalVelocity: 8
+  maxDropVelocity: 16
+  jumpForce: 12
   maxMidairJumps: 3
   coyoteTime: 0.3
   hitTakenPushForce: {x: 8, y: 6}

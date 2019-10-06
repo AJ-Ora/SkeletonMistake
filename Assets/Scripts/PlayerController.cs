@@ -15,6 +15,7 @@ namespace SkeletonMistake
         [Header("Variables")]
         [SerializeField] private int health = 3;
         [SerializeField] private float acceleration = 80.0f;
+        [SerializeField] private float airAcceleration = 40.0f;
         [SerializeField] private float maxHorizontalVelocity = 8.0f;
         [SerializeField] private float maxDropVelocity = 8.0f;
         [SerializeField] private float jumpForce = 5.0f;
@@ -195,7 +196,7 @@ namespace SkeletonMistake
 
             if ((hitWallUp.collider == null || hitWallUp.collider == col) && (hitWallDown.collider == null || hitWallDown.collider == col))
             {
-                rigid.AddForce((Vector2.right * Input.GetAxis(inputHorizontal)) * acceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                rigid.AddForce((Vector2.right * Input.GetAxis(inputHorizontal)) * (isGrounded ? acceleration : airAcceleration) * Time.fixedDeltaTime, ForceMode2D.Impulse);
             }
             
             /* ----- LIMIT VELOCITY ----- */
