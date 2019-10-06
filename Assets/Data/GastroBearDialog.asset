@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21aea5fee232cf64d9ffe67bb3de3189, type: 3}
-  m_Name: Dialogs
+  m_Name: GastroBearDialog
   m_EditorClassIdentifier: 
   Entries:
   - Subtitle: Hello! Wanna try my apple pie?

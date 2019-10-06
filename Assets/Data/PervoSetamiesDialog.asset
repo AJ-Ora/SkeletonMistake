@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21aea5fee232cf64d9ffe67bb3de3189, type: 3}
+  m_Name: PervoSetamiesDialog
+  m_EditorClassIdentifier: 
+  Entries:
+  - Subtitle: Huff & puff m`person
+    Choices:
+    - Text: What?
+      ChoiceType: 0
+      NextDialogIndex: 1
+    - Text: I don't like my gender unassumed
+      ChoiceType: 0
+      NextDialogIndex: 2
+    - Text: Cocoa puffs to you too!
+      ChoiceType: 0
+      NextDialogIndex: 3
+  - Subtitle: Would you like to lick my deathstar?
+    Choices:
+    - Text: Umm.. sure (Licks deathstar.)
+      ChoiceType: 1
+      NextDialogIndex: 1
+  - Subtitle: Oh, you're one of those types...
+    Choices:
+    - Text: Ok :(
+      ChoiceType: 2
+      NextDialogIndex: 1
+  - Subtitle: Haha! You're funny!
+    Choices:
+    - Text: (continue)
+      ChoiceType: 0
+      NextDialogIndex: 4
+  - Subtitle: I am Perverted Hermit! I like talking to weird people.
+    Choices:
+    - Text: I like the way you talk!
+      ChoiceType: 0
+      NextDialogIndex: 5
+    - Text: Umm... I must go
+      ChoiceType: 0
+      NextDialogIndex: 6
+    - Text: I like to keep away from folks like you
+      ChoiceType: 0
+      NextDialogIndex: 7
+  - Subtitle: Wanna do a thing with me? (wink wink)
+    Choices:
+    - Text: Sure!
+      ChoiceType: 1
+      NextDialogIndex: 1
+  - Subtitle: Have it your way. I think you'll find out people with high standards
+      die alone.
+    Choices:
+    - Text: Ok :(
+      ChoiceType: 2
+      NextDialogIndex: 1
+  - Subtitle: Ha, do you think you're better than me?
+    Choices:
+    - Text: Yes.
+      ChoiceType: 1
+      NextDialogIndex: 1
+  Portrait: {fileID: 21300000, guid: ab25b9ebace2a384b839a38bf1df519e, type: 3}
+  CharacterPrefab: {fileID: 1845704343116627534, guid: 29b87e4c1feb8fb42a4fbc5d07ace171,
+    type: 3}
+  ChunkIndex: 19

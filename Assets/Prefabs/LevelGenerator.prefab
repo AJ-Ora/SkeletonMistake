@@ -49,9 +49,10 @@ MonoBehaviour:
   generateChunks: 3
   dialogs:
   - {fileID: 11400000, guid: 5b29273339b07e049b0c8fd2be2acb40, type: 2}
+  - {fileID: 11400000, guid: f639d4cdb6a42fe408eb5a4cd2201c24, type: 2}
   datingCharacterPosition: {x: 10, y: 1}
   dialogTriggerPrefab: {fileID: 8230098196941271338, guid: 99e9fb17afcc6294d8b2773f7bb382e5,
     type: 3}
-  chunksUntilWin: 10
+  chunksUntilWin: 20
   winTriggerPrefab: {fileID: 3197263978220783710, guid: 5ffbf1393b4ced24cb915382b9badd14,
     type: 3}
