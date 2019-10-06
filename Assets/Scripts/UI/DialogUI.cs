@@ -10,13 +10,15 @@ namespace SkeletonMistake
     {
         [SerializeField] private Text subtitle;
 
-        private int currentDialog = -1;
+        private DialogData dialog;
+        private int currentEntry = -1;
 
         void Start()
         {
             Events.OnDialogStart += DialogStart;
-            Events.OnDialogSelected += DialogSelected;
             Events.OnDialogEnd += DialogEnd;
+            Events.OnDialogEntryChange += DialogEntryChange;
+            Events.OnDialogSelected += DialogSelected;
             Events.OnPlayerTakeDamage += PlayerTakeDamage;
             gameObject.SetActive(false);
         }
@@ -24,37 +26,56 @@ namespace SkeletonMistake
         private void OnDestroy()
         {
             Events.OnDialogStart -= DialogStart;
-            Events.OnDialogSelected -= DialogSelected;
             Events.OnDialogEnd -= DialogEnd;
+            Events.OnDialogSelected -= DialogSelected;
+            Events.OnPlayerTakeDamage -= PlayerTakeDamage;
         }
 
-        private void DialogStart(int dialogIndex)
+        private void DialogStart(DialogData dialog)
         {
             gameObject.SetActive(true);
-            currentDialog = dialogIndex;
+            this.dialog = dialog;
 
-            var entry = DialogManager.Instance.GetEntry(currentDialog);
-            subtitle.text = entry?.Subtitle;
+            Events.InvokeDialogEntryChange(dialog, 0);
         }
 
-        private void DialogSelected(int choiceIndex)
+        private void DialogEnd(DialogData.DialogChoiceType result)
         {
-            var entry = DialogManager.Instance.GetEntry(currentDialog);
-            if(entry == null)
+            gameObject.SetActive(false);
+            dialog = null;
+            currentEntry = -1;
+        }
+
+        private void DialogEntryChange(DialogData dialog, int entryIndex)
+        {
+            if (entryIndex < 0 || entryIndex >= (dialog?.Entries?.Count ?? 0))
             {
                 return;
             }
 
-            var choice = DialogManager.Instance.GetChoice(entry, choiceIndex);
-            if(choice == null)
+            var entry = dialog.Entries[entryIndex];
+            subtitle.text = entry?.Subtitle ?? "";
+            currentEntry = entryIndex;
+        }
+
+        private void DialogSelected(DialogData dialog, int choiceIndex)
+        {
+            if (currentEntry < 0 || currentEntry >= (dialog?.Entries?.Count ?? 0))
             {
                 return;
             }
 
+            var entry = dialog.Entries[currentEntry];
+            if (choiceIndex < 0 || choiceIndex >= (entry?.Choices?.Count ?? 0))
+            {
+                return;
+            }
+
+            var choice = entry.Choices[choiceIndex];
             switch (choice.ChoiceType)
             {
                 case DialogData.DialogChoiceType.NextDialog:
-                    Events.InvokeDialogStart(choice.NextDialogIndex);
+                    Events.InvokeDialogEntryChange(dialog, choice.NextDialogIndex);
                     break;
                 case DialogData.DialogChoiceType.Success:
                     Events.InvokeDialogEnd(DialogData.DialogChoiceType.Success);
@@ -63,12 +84,6 @@ namespace SkeletonMistake
                     Events.InvokeDialogEnd(DialogData.DialogChoiceType.Fail);
                     break;
             }
-        }
-
-        private void DialogEnd(DialogData.DialogChoiceType result)
-        {
-            gameObject.SetActive(false);
-            currentDialog = -1;
         }
 
         private void PlayerTakeDamage(int health, int damage)

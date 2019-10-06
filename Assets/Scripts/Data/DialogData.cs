@@ -25,10 +25,12 @@ namespace SkeletonMistake
         public class DialogEntry
         {
             public string Subtitle;
-            public Sprite Portrait;
             public List<DialogChoice> Choices;
         }
 
         public List<DialogEntry> Entries;
+        public Sprite Portrait;
+        public GameObject CharacterPrefab;
+        public int ChunkIndex;
     }
 }

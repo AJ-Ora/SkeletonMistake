@@ -6,17 +6,16 @@ namespace SkeletonMistake
 {
     public class DialogTrigger : MonoBehaviour
     {
-        public int DialogIndex { get; set; }
+        public DialogData Dialog { get; set; }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            print(collision.gameObject.tag);
-            if(collision.gameObject.tag != "Player")
+            if(collision.gameObject.tag != "Player" || Dialog == null)
             {
                 return;
             }
 
-            Events.InvokeDialogStart(DialogIndex);
+            Events.InvokeDialogStart(Dialog);
             gameObject.SetActive(false);
         }
     }

@@ -20,7 +20,7 @@ namespace SkeletonMistake
             Events.OnPlayerTakeDamage -= PlayerTakeDamage;
         }
 
-        private void DialogStart(int dialogIndex)
+        private void DialogStart(DialogData dialog)
         {
             gameObject.SetActive(false);
         }

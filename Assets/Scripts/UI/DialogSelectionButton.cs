@@ -12,34 +12,42 @@ namespace SkeletonMistake
 
         private Button button;
 
+        private DialogData dialog;
+
         private void Start()
         {
             button = GetComponent<Button>();
             button.onClick.AddListener(OnClick);
-            Events.OnDialogStart += DialogStart;
+            Events.OnDialogEntryChange += DialogEntryChange;
         }
 
         private void OnDestroy()
         {
             button?.onClick.RemoveListener(OnClick);
-            Events.OnDialogStart -= DialogStart;
+            Events.OnDialogEntryChange -= DialogEntryChange;
         }
 
         private void OnClick()
         {
-            Events.InvokeDialogSelected(choiceIndex);
+            Events.InvokeDialogSelected(dialog, choiceIndex);
         }
 
-        private void DialogStart(int dialogIndex)
+        private void DialogEntryChange(DialogData dialog, int entryIndex)
         {
-            var entry = DialogManager.Instance.GetEntry(dialogIndex);
-            if (entry == null)
+            if (entryIndex < 0 || entryIndex >= (dialog?.Entries?.Count ?? 0))
             {
                 return;
             }
 
-            var choice = DialogManager.Instance.GetChoice(entry, choiceIndex);
+            var entry = dialog.Entries[entryIndex];
+            if (choiceIndex < 0 || choiceIndex >= (entry?.Choices?.Count ?? 0))
+            {
+                return;
+            }
+
+            var choice = entry.Choices[choiceIndex];
             button.enabled = choice != null;
+            this.dialog = dialog;
         }
     }
 }

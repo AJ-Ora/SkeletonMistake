@@ -23,7 +23,7 @@ namespace SkeletonMistake
             Events.OnGameWon -= GameWon;
         }
 
-        private void DialogStart(int dialogIndex)
+        private void DialogStart(DialogData dialog)
         {
             controller.enabled = false;
         }
