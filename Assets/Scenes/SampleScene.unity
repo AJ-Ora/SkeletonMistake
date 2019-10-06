@@ -190,6 +190,26 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 292332880}
+    - target: {fileID: 6039500213641943578, guid: 0eff8dc66767e324da983bc48870c897,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039500213641943578, guid: 0eff8dc66767e324da983bc48870c897,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039500213641943578, guid: 0eff8dc66767e324da983bc48870c897,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039500213641943578, guid: 0eff8dc66767e324da983bc48870c897,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eff8dc66767e324da983bc48870c897, type: 3}
 --- !u!1 &911977496 stripped
