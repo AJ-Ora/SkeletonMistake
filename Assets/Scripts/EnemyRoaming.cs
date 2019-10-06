@@ -40,6 +40,11 @@ namespace SkeletonMistake
             }
         }
 
+        private void OnDestroy()
+        {
+            
+        }
+
         private void FixedUpdate()
         {
             /* ----- CHECK IF ENEMY SHOULD CHANGE DIRECTION ----- */
