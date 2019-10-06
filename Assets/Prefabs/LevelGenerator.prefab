@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba57c2fa0c7ac784b86dc714247e137d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCombat: {fileID: 11400000, guid: 9b972c1d131503847be36d4bcb0fd800, type: 2}
+  levelCombat: {fileID: 11400000, guid: ce0eb908498b24e4fb60237abb90660e, type: 2}
   levelDating: {fileID: 11400000, guid: 376435460339da24c94cbbd9a07b289e, type: 2}
   player: {fileID: 0}
   generateChunks: 3

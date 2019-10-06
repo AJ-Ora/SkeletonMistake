@@ -58,6 +58,37 @@ namespace SkeletonMistake
             }
         }
 
+        private void Start()
+        {
+            Events.OnDialogEnd += DialogEnd;
+        }
+
+        private void OnDestroy()
+        {
+            Events.OnDialogEnd -= DialogEnd;
+        }
+
+        private void DialogEnd(DialogData.DialogChoiceType result)
+        {
+            var healthDelta = result == DialogData.DialogChoiceType.Success ? 1 : (result == DialogData.DialogChoiceType.Fail ? -1 : 0);
+            health += healthDelta;
+
+            if(health > 3)
+            {
+                health = 3;
+                return;
+            }
+
+            if(healthDelta < 0)
+            {
+                Events.InvokePlayerTakeDamage(health, Mathf.Abs(healthDelta));
+            }
+            else if(healthDelta > 0)
+            {
+                Events.InvokePlayerHeal(health, Mathf.Abs(healthDelta));
+            }
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "Enemy")
