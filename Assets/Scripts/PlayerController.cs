@@ -23,10 +23,17 @@ namespace SkeletonMistake
         [SerializeField] private Vector2 hitTakenPushForce = Vector2.zero;
         [SerializeField] private GameObject projectile = null;
         [SerializeField] private Vector3 projectileSpawnPosition = Vector3.down;
+        [SerializeField] private ParticleSystem projectileParticles = null;
 
         [Header("Animations")]
         [SerializeField] private Animator playerAnimator = null;
         [SerializeField] private SpriteRenderer playerSprite = null;
+
+        [Header("SFX")]
+        [SerializeField] private AudioSource source = null;
+        [SerializeField] private AudioClip clipJump = null;
+        [SerializeField] private AudioClip clipShoot = null;
+        [SerializeField] private AudioClip clipHurt = null;
 
         private Rigidbody2D rigid = null;
         private BoxCollider2D col = null;
@@ -68,12 +75,25 @@ namespace SkeletonMistake
         private void OnHurt()
         {
             health--;
-
+            PlaySound(clipHurt, source);
             Events.InvokePlayerTakeDamage(health, 1);
             
             if (health <= 0)
             {
                 Destroy(this.gameObject);
+            }
+        }
+
+        private void PlaySound(AudioClip clip, AudioSource source)
+        {
+            if (clip != null && source != null)
+            {
+                if (source.isPlaying)
+                {
+                    source.Stop();
+                }
+                source.clip = clip;
+                source.Play();
             }
         }
 
@@ -87,7 +107,7 @@ namespace SkeletonMistake
                     playerSprite.flipX = (Input.GetAxisRaw(inputHorizontal) >= 0.0f ? true : false);
                 }
                 
-                playerAnimator.SetFloat("Move Horizontal", rigid.velocity.x);
+                playerAnimator.SetFloat("Move Horizontal", Mathf.Abs(rigid.velocity.x));
                 playerAnimator.SetFloat("Move Vertical", rigid.velocity.y);
                 playerAnimator.SetBool("Is Grounded", isGrounded);
             }
@@ -143,6 +163,11 @@ namespace SkeletonMistake
                                 {
                                     Instantiate(projectile, transform.position + projectileSpawnPosition, Quaternion.identity, null);
                                     Events.InvokePlayerShoot(currentMidairJumps);
+                                    PlaySound(clipShoot, source);
+                                    if (projectileParticles != null)
+                                    {
+                                        Instantiate(projectileParticles, transform.position + projectileSpawnPosition, Quaternion.identity, null);
+                                    }
                                 }
                                 else
                                 {
@@ -153,6 +178,10 @@ namespace SkeletonMistake
                         currentCoyoteTime = 0.0f;
                         rigid.velocity = new Vector2(rigid.velocity.x, 0.0f);
                         rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                        if ((source.isPlaying && source.clip == clipShoot) == false)
+                        {
+                            PlaySound(clipJump, source);
+                        }
                     }
                 }
             }
