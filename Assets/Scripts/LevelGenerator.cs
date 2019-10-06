@@ -72,7 +72,16 @@ namespace SkeletonMistake
                 }
                 else
                 {
-                    Texture2D selectedChunk = levelCombat.levels[Random.Range(0, levelCombat.levels.Length)];
+                    Texture2D selectedChunk;
+
+                    if (screensCount == 0)
+                    {
+                        selectedChunk = levelCombat.levels[0];
+                    }
+                    else
+                    {
+                        selectedChunk = levelCombat.levels[Random.Range(1, levelCombat.levels.Length)];
+                    }
                     GenerateChunk(levelCombat, selectedChunk, new Vector2(selectedChunk.width, selectedChunk.height));
                 }
             }

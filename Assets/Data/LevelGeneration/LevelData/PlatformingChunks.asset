@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4368eb124988b348b74ec1ae1d5c537, type: 3}
+  m_Name: PlatformingChunks
+  m_EditorClassIdentifier: 
+  levels:
+  - {fileID: 2800000, guid: 6f8d8cce74d3ea34d87402c9d2af35d3, type: 3}
+  - {fileID: 2800000, guid: 3b47e62cdc49ae9408eb4ee32a00f847, type: 3}
+  - {fileID: 2800000, guid: 84abea636b5f7e34aa6ffa61cb2ca714, type: 3}
+  - {fileID: 2800000, guid: 54c548360ee7d764981a4899840b2587, type: 3}
+  - {fileID: 2800000, guid: 8204b86f495a5764fa0687bf6c7733f5, type: 3}
+  - {fileID: 2800000, guid: 0d28d2998db04c04d9ac172dcad1c5fd, type: 3}
+  - {fileID: 2800000, guid: 585e906f0c2695a4cabc3a0b1001b44e, type: 3}
+  - {fileID: 2800000, guid: 975ee7a3f8dd68e4ca118efdb85f2dde, type: 3}
+  - {fileID: 2800000, guid: f67c80fad8d11144aa2ecd0ef5a9c666, type: 3}
+  - {fileID: 2800000, guid: d7b59ac27be815342b8b1e0707cd79af, type: 3}
+  - {fileID: 2800000, guid: 9c8ce5ed49adf3347940590a469f954d, type: 3}
+  tiles:
+  - {fileID: 11400000, guid: 7112338132dba53478af39df4b6801b3, type: 2}
+  - {fileID: 11400000, guid: b522c01c4f1ea33438423b24fa382310, type: 2}
+  - {fileID: 11400000, guid: 059170d29217e634195784a352b1d4fa, type: 2}

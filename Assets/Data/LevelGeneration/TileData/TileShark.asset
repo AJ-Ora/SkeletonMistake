@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dcc79685266ca4cbfe55718768e0f2, type: 3}
+  m_Name: TileShark
+  m_EditorClassIdentifier: 
+  tileName: Roaming Enemy
+  tileColor: {r: 0.96862745, g: 0.7882353, b: 0.07450981, a: 1}
+  tileObject: {fileID: 2438494035152369602, guid: e271ca1c6b72e4943a132a3b99f53dd4,
+    type: 3}
