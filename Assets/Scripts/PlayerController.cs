@@ -43,6 +43,8 @@ namespace SkeletonMistake
         private int currentMidairJumps = 0;
         private float currentCoyoteTime = 0.0f;
 
+        private bool rapidFire = false;
+
         private void Awake()
         {
             if (rigid == null)
@@ -79,7 +81,9 @@ namespace SkeletonMistake
             health--;
             PlaySound(clipHurt, source);
             Events.InvokePlayerTakeDamage(health, 1);
-            
+
+            playerAnimator.SetTrigger("Is Hurt");
+
             if (health <= 0)
             {
                 Destroy(this.gameObject);
@@ -98,7 +102,7 @@ namespace SkeletonMistake
                 source.Play();
             }
         }
-
+        
         private void Update()
         {
             /* ----- UPDATE ANIMATIONS ----- */
@@ -112,6 +116,12 @@ namespace SkeletonMistake
                 playerAnimator.SetFloat("Move Horizontal", Mathf.Abs(rigid.velocity.x));
                 playerAnimator.SetFloat("Move Vertical", rigid.velocity.y);
                 playerAnimator.SetBool("Is Grounded", isGrounded);
+            }
+
+            /* ----- RAPID FIRE ----- */
+            if (Input.GetKeyDown(KeyCode.F4))
+            {
+                rapidFire = !rapidFire;
             }
         }
 
@@ -152,7 +162,10 @@ namespace SkeletonMistake
             {
                 if (!isJumping)
                 {
-                    isJumping = true;
+                    if (!rapidFire)
+                    {
+                        isJumping = true;
+                    }
 
                     if (isGrounded || currentMidairJumps > 0)
                     {
@@ -160,7 +173,11 @@ namespace SkeletonMistake
                         {
                             if (currentCoyoteTime <= 0.0f)
                             {
-                                currentMidairJumps--;
+                                if (!rapidFire)
+                                {
+                                    currentMidairJumps--;
+                                }
+                                
                                 if (projectile != null)
                                 {
                                     Instantiate(projectile, transform.position + projectileSpawnPosition, Quaternion.identity, null);
