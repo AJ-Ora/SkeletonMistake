@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22227a94f4e7c0b499e9ad944001f1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectWhenDestroyed: {fileID: 457506220101103909, guid: 206182a812c2f7b45aac36e5a350a1cd,
+  effectWhenDestroyed: {fileID: 6813453731763362282, guid: be68d3c75bc52bd4db8c28acadb0f172,
     type: 3}
 --- !u!1 &1819069477291342782
 GameObject:
