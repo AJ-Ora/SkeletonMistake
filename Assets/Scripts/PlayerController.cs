@@ -63,6 +63,7 @@ namespace SkeletonMistake
                 if (transform.position.y >= collision.transform.position.y + 0.25f)
                 {
                     rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    currentMidairJumps = maxMidairJumps;
                     Destroy(collision.gameObject);
                 }
                 else
