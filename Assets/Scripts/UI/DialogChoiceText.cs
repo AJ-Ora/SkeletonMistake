@@ -14,23 +14,24 @@ namespace SkeletonMistake
         private void Start()
         {
             text = GetComponent<Text>();
-            Events.OnDialogStart += DialogStart;
+            Events.OnDialogEntryChange += DialogEntryChange;
         }
 
         private void OnDestroy()
         {
-            Events.OnDialogStart -= DialogStart;
+            Events.OnDialogEntryChange -= DialogEntryChange;
         }
 
-        private void DialogStart(int dialogIndex)
+        private void DialogEntryChange(DialogData dialog, int entryIndex)
         {
-            var entry = DialogManager.Instance.GetEntry(dialogIndex);
-            if (entry == null)
+            if(entryIndex < 0 || entryIndex >= (dialog?.Entries?.Count ?? 0))
             {
                 return;
             }
 
-            var choice = DialogManager.Instance.GetChoice(entry, choiceIndex);
+            var entry = dialog.Entries[entryIndex];
+
+            var choice = (choiceIndex >= 0 && choiceIndex < (entry?.Choices?.Count ?? 0)) ? entry.Choices[choiceIndex] : null;
             text.text = choice?.Text ?? "";
         }
     }

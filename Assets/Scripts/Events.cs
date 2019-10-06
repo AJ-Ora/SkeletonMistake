@@ -6,17 +6,21 @@ namespace SkeletonMistake
 {
     public static class Events
     {
-        public delegate void DialogStart(int dialogIndex);
+        public delegate void DialogStart(DialogData dialog);
         public static event DialogStart OnDialogStart = delegate { };
-        public static void InvokeDialogStart(int dialogIndex) => OnDialogStart(dialogIndex);
+        public static void InvokeDialogStart(DialogData dialog) => OnDialogStart(dialog);
 
         public delegate void DialogEnd(DialogData.DialogChoiceType result);
         public static event DialogEnd OnDialogEnd = delegate { };
         public static void InvokeDialogEnd(DialogData.DialogChoiceType result) => OnDialogEnd(result);
 
-        public delegate void DialogSelected(int choiceIndex);
+        public delegate void DialogEntryChange(DialogData dialog, int entryIndex);
+        public static event DialogEntryChange OnDialogEntryChange = delegate { };
+        public static void InvokeDialogEntryChange(DialogData dialog, int entryIndex) => OnDialogEntryChange(dialog, entryIndex);
+
+        public delegate void DialogSelected(DialogData dialog, int choiceIndex);
         public static event DialogSelected OnDialogSelected = delegate { };
-        public static void InvokeDialogSelected(int choiceIndex) => OnDialogSelected(choiceIndex);
+        public static void InvokeDialogSelected(DialogData dialog, int choiceIndex) => OnDialogSelected(dialog, choiceIndex);
 
         public delegate void PlayerShoot(int ammoLeft);
         public static event PlayerShoot OnPlayerShoot = delegate { };

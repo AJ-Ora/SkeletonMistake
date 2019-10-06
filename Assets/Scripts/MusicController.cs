@@ -29,7 +29,7 @@ namespace SkeletonMistake
             Events.OnDialogEnd -= DialogEnded;
         }
 
-        private void DialogStarted(int dialogIndex)
+        private void DialogStarted(DialogData dialog)
         {
             source.Stop();
             source.clip = clipDating;

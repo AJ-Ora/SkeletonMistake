@@ -12,7 +12,7 @@ namespace SkeletonMistake
         [SerializeField] private GameObject player = null;
         [SerializeField] private int generateChunks = 3;
 
-        [SerializeField] private DateData dateData;
+        [SerializeField] private DialogData[] dialogs;
         [SerializeField] private Vector2Int datingCharacterPosition = new Vector2Int(10, 8);
         [SerializeField] private GameObject dialogTriggerPrefab;
 
@@ -49,24 +49,24 @@ namespace SkeletonMistake
                     continue;
                 }
 
-                DateData.Date date;
+                DialogData dialog;
                 if(i >= chunksUntilWin)
                 {
                     var trigger = Instantiate(winTriggerPrefab);
                     trigger.transform.position = Vector3.down * screensCount * 16;
                     screensCount++;
                 }
-                else if ((date = GetDatingChunk(i)) != null)
+                else if ((dialog = GetDialog(i)) != null)
                 {
                     var chunk = levelDating.levels[0];
                     var screen = GenerateChunk(levelDating, chunk, new Vector2(chunk.width, chunk.height));
 
                     var trigger = Instantiate(dialogTriggerPrefab);
-                    trigger.GetComponent<DialogTrigger>().DialogIndex = date.DialogIndex;
+                    trigger.GetComponent<DialogTrigger>().Dialog = dialog;
                     trigger.transform.position = Vector3.down * (screensCount - 1) * chunk.height;
                     trigger.transform.parent = screen.transform;
 
-                    var character = Instantiate(date.CharacterPrefab);
+                    var character = Instantiate(dialog.CharacterPrefab);
                     character.transform.position = new Vector3(screen.transform.position.x + datingCharacterPosition.x, screen.transform.position.y + datingCharacterPosition.y, screen.transform.position.z);
                     character.transform.parent = screen.transform;
                 }
@@ -135,13 +135,13 @@ namespace SkeletonMistake
             }
         }
 
-        private DateData.Date GetDatingChunk(int chunkIndex)
+        private DialogData GetDialog(int chunkIndex)
         {
-            foreach(var date in dateData.Dates)
+            foreach(var dialog in dialogs)
             {
-                if(date.ChunkIndex == chunkIndex)
+                if(dialog.ChunkIndex == chunkIndex)
                 {
-                    return date;
+                    return dialog;
                 }
             }
 
