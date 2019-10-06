@@ -24,6 +24,10 @@ namespace SkeletonMistake
         [SerializeField] private GameObject projectile = null;
         [SerializeField] private Vector3 projectileSpawnPosition = Vector3.down;
 
+        [Header("Animations")]
+        [SerializeField] private Animator playerAnimator = null;
+        [SerializeField] private SpriteRenderer playerSprite = null;
+
         private Rigidbody2D rigid = null;
         private BoxCollider2D col = null;
         private bool isJumping = false;
@@ -70,6 +74,22 @@ namespace SkeletonMistake
             if (health <= 0)
             {
                 Destroy(this.gameObject);
+            }
+        }
+
+        private void Update()
+        {
+            /* ----- UPDATE ANIMATIONS ----- */
+            if (playerAnimator != null && playerSprite != null)
+            {
+                if (Input.GetAxisRaw(inputHorizontal) != 0.0f)
+                {
+                    playerSprite.flipX = (Input.GetAxisRaw(inputHorizontal) >= 0.0f ? true : false);
+                }
+                
+                playerAnimator.SetFloat("Move Horizontal", rigid.velocity.x);
+                playerAnimator.SetFloat("Move Vertical", rigid.velocity.y);
+                playerAnimator.SetBool("Is Grounded", isGrounded);
             }
         }
 
