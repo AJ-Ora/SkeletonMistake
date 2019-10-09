@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4368eb124988b348b74ec1ae1d5c537, type: 3}
+  m_Name: Dating Level Data
+  m_EditorClassIdentifier: 
+  levels:
+  - {fileID: 2800000, guid: 5827b5450e49a6c478f17063a093e54c, type: 3}
+  tiles:
+  - {fileID: 11400000, guid: 5cbf17f8aa641064ca48625c47eadf7f, type: 2}
+  - {fileID: 11400000, guid: 2725fb05cff516547b776b557f9ece1f, type: 2}

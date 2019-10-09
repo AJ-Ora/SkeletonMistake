@@ -20,13 +20,11 @@ namespace SkeletonMistake
             Events.OnDialogStart -= DialogStart;
         }
 
-        private void DialogStart(int dialogIndex)
+        private void DialogStart(DialogData dialog)
         {
-            var entry = DialogManager.Instance.GetEntry(dialogIndex);
-
-            if(entry?.Portrait != null)
+            if(dialog.Portrait != null)
             {
-                image.sprite = entry.Portrait;
+                image.sprite = dialog.Portrait;
             }
         }
     }
